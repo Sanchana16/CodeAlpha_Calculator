@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator Project</title>
+	<style>
+		body{
+			align-items: center;
+			font-family: times new roman;
+			justify-content: center;
+			background-color: ghostwhiteS;
+			display: flex;
+			padding: 100px;
+			height: 400px;
+		}
+		.calci{
+			background-color: black;
+			padding: 25px;
+			border-radius: 15px;
+		}
+		input{
+			background-color:#C7F0C7;
+			width: 85%;
+			margin-bottom: 10px;
+			padding: 20px;
+			text-align: right;
+			color: black;
+			font-size: 20px;
+		}
+		button{
+s
+			padding: 20px;
+			height:60px;
+			width: 60px;
+			margin: 7px;
+			border-radius: 5px;	
+			font-size: 20px;
+			cursor: pointer;
+		}
+		button:hover{
+			background-color:lightgrey;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class= "calci">
+		<input type="text" id="display" disabled >
+		<br>
+		<button onclick="press('1')">1</button>
+		<button onclick="press('2')">2</button>
+		<button onclick="press('3')">3</button>
+		<button onclick="press('+')">+</button><br>
+		<button onclick="press('4')">4</button>
+		<button onclick="press('5')">5</button>
+		<button onclick="press('6')">6</button>
+		<button onclick="press('-')">-</button><br>
+		<button onclick="press('7')">7</button>
+		<button onclick="press('8')">8</button>
+		<button onclick="press('9')">9</button>
+		<button onclick="press('*')">*</button><br>
+		<button onclick="press('0')">0</button>
+		<button onclick="press('.')">.</button>
+		<button onclick="calculation()">=</button>
+		<button onclick="press('/')">/</button><br>
+		<button onclick="del()">DEL</button>
+		<button onclick="clearr()">C</button>
+	</div>
+</body>
+<script>
+	let display=document.getElementById("display");
+	function press(val){
+		display.value+=val;
+	}
+	function calculation(){
+		display.value=eval(display.value);
+	}
+	function clearr(){
+		display.value="";
+	} 
+	function del(){
+		display.value=display.value.slice(0,-1);
+	}
+
+
+</script>
+</html>
